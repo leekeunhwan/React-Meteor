@@ -2,6 +2,7 @@ import React from "react";
 import { Meteor } from "meteor/meteor";
 import { render } from "react-dom";
 
+import '../imports/startup/accounts-config.js'
 import App from "../imports/ui/App.js";
 
 // 페이지가 로드되고 준비될 때 코드를 호출하는 방법을 알고 있다.
