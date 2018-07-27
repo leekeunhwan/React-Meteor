@@ -17,6 +17,8 @@ Meteor.methods({
       createdAt: new Date(),
       owner: this.userId,
       username: Meteor.users.findOne(this.userId).username
+        ? Meteor.users.findOne(this.userId).username
+        : Meteor.user().profile.name
     });
   },
 
@@ -30,6 +32,7 @@ Meteor.methods({
     check(taskId, String);
     check(setChecked, Boolean);
 
+    // $ set 연산자는 필드의 값을 지정된 값으로 바꿉니다.
     Tasks.update(taskId, { $set: { checked: setChecked } });
   }
 });

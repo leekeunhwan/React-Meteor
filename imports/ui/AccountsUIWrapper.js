@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Template } from "meteor/templating";
 import { Blaze } from "meteor/blaze";
+import { Meteor } from "meteor/meteor";
 
 export default class AccountsUIWrapper extends Component {
   componentDidMount() {
@@ -18,7 +19,11 @@ export default class AccountsUIWrapper extends Component {
   }
 
   render() {
+    const styleCss = {
+      display: "block"
+    };
     // 나중에 채워질 플레이스홀더 컨테이너를 렌더링한다.
-    return <span ref="container" />;
+    return <span ref="container" style={styleCss} />;
   }
 }
+    
