@@ -60,7 +60,7 @@ Meteor.methods({
   },
   "tasks.setPrivate"(taskId, setToPrivate) {
     check(taskId, String);
-    check(setToPrivate, String);
+    check(setToPrivate, Boolean);
 
     const task = Tasks.findOne(taskId);
 

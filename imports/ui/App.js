@@ -64,7 +64,7 @@ class App extends Component {
       <div className="container">
         <header>
           <h1>
-            할일을 합시다 ({`해야할 일이 ${
+            우리 모두 같이 할일을 합시다 ({`해야할 일이 ${
               this.props.incompleteCount
             }개 있습니다.`})
           </h1>
